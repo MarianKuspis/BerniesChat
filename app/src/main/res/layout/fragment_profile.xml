@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ProfileFragment"
+    android:background="@color/gray_80">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <RelativeLayout
+        android:id="@+id/content_profile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:id="@+id/head_form"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/purple_20"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="UTM"
+                android:textSize="30dp"
+                android:textColor="@color/gray_80"
+                android:textStyle="bold"
+                android:layout_margin="5dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="viewEnd"
+                android:text="Профіль"
+                android:textSize="30dp"
+                android:textColor="@color/gray_80"
+                android:textStyle="bold"
+                android:layout_margin="3dp"
+                android:drawableEnd="@drawable/ic_profile"/>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/log_form"
+            android:layout_below="@+id/head_form"
+            android:layout_margin="10dp">
+
+            <TextView
+                android:id="@+id/reg_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="5dp"
+                android:text="Ваші дані"
+                android:textColor="@color/text"
+                android:textSize="25dp" />
+
+            <EditText
+                android:id="@+id/email_field1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/reg_text"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="@color/bg_form"
+                android:drawableLeft="@drawable/ic_email"
+                android:hint="Введіть емейл"
+                android:imeOptions="actionNext"
+                android:minHeight="48dp"
+                android:nextFocusDown="@+id/log_field"
+                android:padding="5dp"
+                android:singleLine="true"
+                android:textColor="@color/text"
+                android:textColorHint="@color/hint"
+                android:textSize="20dp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/log_form"
+            android:id="@+id/login_form"
+            android:layout_margin="10dp">
+
+            <EditText
+                android:id="@+id/login_field1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="@color/bg_form"
+                android:drawableLeft="@drawable/ic_login"
+                android:hint="Введіть логін"
+                android:imeOptions="actionNext"
+                android:minHeight="48dp"
+                android:padding="5dp"
+                android:singleLine="true"
+                android:textColor="@color/text"
+                android:textColorHint="@color/hint"
+                android:textSize="20dp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/login_form"
+            android:id="@+id/pass_form"
+            android:layout_margin="10dp">
+
+            <EditText
+                android:id="@+id/pass_field1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="@color/bg_form"
+                android:drawableLeft="@drawable/ic_password"
+                android:hint="Введіть пароль"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:minHeight="48dp"
+                android:padding="5dp"
+                android:singleLine="true"
+                android:textColor="@color/text"
+                android:textColorHint="@color/hint"
+                android:textSize="20dp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/pass_form"
+            android:id="@+id/pass_again_form"
+            android:layout_margin="10dp">
+
+            <EditText
+                android:id="@+id/again_field1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="@color/bg_form"
+                android:drawableLeft="@drawable/ic_password"
+                android:hint="Повторно введіть пароль"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:minHeight="48dp"
+                android:padding="5dp"
+                android:singleLine="true"
+                android:textColor="@color/text"
+                android:textColorHint="@color/hint"
+                android:textSize="20dp" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_below="@+id/pass_again_form"
+            android:id="@+id/btn_edit_form"
+            android:layout_margin="10dp"
+            android:orientation="horizontal">
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/btn_delete"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                android:text="Видалити"
+                android:layout_margin="10dp">
+            </Button>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/btn_save"
+                android:text="Зберегти"
+                android:layout_margin="10dp">
+            </Button>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        >
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/to_profile"
+            android:layout_margin="5dp"
+            android:src="@drawable/ic_profile"
+            android:background="@color/purple_20"
+            app:tint="@color/hint"></ImageButton>
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:id="@+id/to_reviews"
+            android:src="@drawable/ic_baseline_message_24"
+            android:background="@color/gray_80"
+            app:tint="@color/hint"></ImageButton>
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/to_shop"
+            android:layout_margin="5dp"
+            android:src="@drawable/ic_shop"
+            android:background="@color/gray_80"
+            app:tint="@color/hint"></ImageButton>
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/to_basket"
+            android:layout_margin="5dp"
+            android:src="@drawable/ic_basket"
+            android:background="@color/gray_80"
+            app:tint="@color/hint"></ImageButton>
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/to_logout"
+            android:layout_margin="5dp"
+            android:src="@drawable/ic_logout"
+            android:background="@color/gray_80"
+            app:tint="@color/hint"></ImageButton>
+
+    </LinearLayout>
+
+</FrameLayout>

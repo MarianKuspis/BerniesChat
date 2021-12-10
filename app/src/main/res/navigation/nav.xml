@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.utm.utmshop.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/shop_to_basket"
+            app:destination="@id/basketFragment" />
+        <action
+            android:id="@+id/shop_to_profile"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/shop_to_reviews"
+            app:destination="@id/reviewsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.utm.utmshop.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/profile_to_shop"
+            app:destination="@id/mainFragment" />
+        <action
+            android:id="@+id/profile_to_reviews"
+            app:destination="@id/reviewsFragment" />
+        <action
+            android:id="@+id/profile_to_basket"
+            app:destination="@id/basketFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/reviewsFragment"
+        android:name="com.utm.utmshop.ReviewsFragment"
+        android:label="fragment_reviews"
+        tools:layout="@layout/fragment_reviews" >
+        <action
+            android:id="@+id/reviews_to_basket"
+            app:destination="@id/basketFragment" />
+        <action
+            android:id="@+id/reviews_to_shop"
+            app:destination="@id/mainFragment" />
+        <action
+            android:id="@+id/reviews_to_profile"
+            app:destination="@id/profileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/basketFragment"
+        android:name="com.utm.utmshop.BasketFragment"
+        android:label="fragment_basket"
+        tools:layout="@layout/fragment_basket" >
+        <action
+            android:id="@+id/basket_to_reviews"
+            app:destination="@id/reviewsFragment" />
+        <action
+            android:id="@+id/basket_to_profile"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/basket_to_shop"
+            app:destination="@id/mainFragment" />
+    </fragment>
+</navigation>

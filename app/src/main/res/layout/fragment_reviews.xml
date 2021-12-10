@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ReviewsFragment"
+    android:background="@color/gray_80">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom">
+
+        <LinearLayout
+            android:id="@+id/head_form"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/purple_20"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="UTM"
+                android:textSize="30dp"
+                android:textColor="@color/gray_80"
+                android:textStyle="bold"
+                android:layout_margin="5dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="viewEnd"
+                android:text="Відгуки"
+                android:textSize="30dp"
+                android:textColor="@color/gray_80"
+                android:textStyle="bold"
+                android:layout_margin="3dp"
+                android:drawableEnd="@drawable/ic_baseline_message_24"/>
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/output_form"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_above="@+id/input_form"
+            android:layout_below="@+id/head_form"
+            android:divider="@color/gray_80"
+            android:dividerHeight="5dp"></ListView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/input_form"
+            android:background="@color/gray_80"
+            android:layout_above="@+id/btn_form"
+            android:orientation="horizontal">
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/input_text_field"
+                android:layout_weight="1"
+                android:background="@color/bg_form"
+                android:textSize="20dp"
+                android:textColor="@color/white"
+                android:padding="5dp"
+                android:layout_margin="5dp"
+                android:textColorHint="@color/hint"
+                android:hint="Введіть повідомлення..."></EditText>
+            <ImageButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/btn_send"
+                android:layout_weight="6"
+                android:layout_margin="5dp"
+                android:layout_marginStart="0dp"
+                android:src="@drawable/ic_baseline_send_24"
+                android:background="@color/gray_80"
+                android:padding="7dp"
+                app:tint="@color/white"></ImageButton>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:id="@+id/btn_form"
+            >
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/to_profile"
+                android:layout_margin="5dp"
+                android:src="@drawable/ic_profile"
+                android:background="@color/gray_80"
+                app:tint="@color/hint"></ImageButton>
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:id="@+id/to_reviews"
+                android:src="@drawable/ic_baseline_message_24"
+                android:background="@color/purple_20"
+                app:tint="@color/hint"></ImageButton>
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/to_shop"
+                android:layout_margin="5dp"
+                android:src="@drawable/ic_shop"
+                android:background="@color/gray_80"
+                app:tint="@color/hint"></ImageButton>
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/to_basket"
+                android:layout_margin="5dp"
+                android:src="@drawable/ic_basket"
+                android:background="@color/gray_80"
+                app:tint="@color/hint"></ImageButton>
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/to_logout"
+                android:layout_margin="5dp"
+                android:src="@drawable/ic_logout"
+                android:background="@color/gray_80"
+                app:tint="@color/hint"></ImageButton>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+</FrameLayout>

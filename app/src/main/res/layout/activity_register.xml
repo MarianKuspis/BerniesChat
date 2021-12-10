@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/register_activity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_80"
+    tools:context=".RegisterActivity">
+
+  <LinearLayout
+      android:id="@+id/reg_head_form"
+      android:layout_width="match_parent"
+      android:layout_height="50dp"
+      android:background="@color/purple_20"
+      android:orientation="horizontal">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="UTM"
+        android:textSize="30dp"
+        android:textColor="@color/gray_80"
+        android:textStyle="bold"
+        android:layout_margin="5dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="viewEnd"
+        android:text="реєстрація"
+        android:textSize="30dp"
+        android:textColor="@color/gray_80"
+        android:textStyle="bold"
+        android:layout_margin="3dp"/>
+  </LinearLayout>
+
+  <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:id="@+id/log_form"
+      android:layout_below="@+id/reg_head_form"
+      android:layout_margin="10dp">
+
+    <TextView
+        android:id="@+id/reg_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
+        android:text="Дані для реєстрації"
+        android:textColor="@color/text"
+        android:textSize="25dp" />
+
+    <EditText
+        android:id="@+id/email_reg_field"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/reg_text"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
+        android:background="@color/bg_form"
+        android:drawableLeft="@drawable/ic_email"
+        android:hint="Введіть емейл"
+        android:imeOptions="actionNext"
+        android:minHeight="48dp"
+        android:nextFocusDown="@+id/log_field"
+        android:padding="5dp"
+        android:singleLine="true"
+        android:textColor="@color/text"
+        android:textColorHint="@color/hint"
+        android:textSize="20dp" />
+  </RelativeLayout>
+
+  <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/log_form"
+      android:id="@+id/login_form"
+      android:layout_margin="10dp">
+
+    <EditText
+        android:id="@+id/login_field"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
+        android:background="@color/bg_form"
+        android:drawableLeft="@drawable/ic_login"
+        android:hint="Введіть логін"
+        android:imeOptions="actionNext"
+        android:singleLine="true"
+        android:minHeight="48dp"
+        android:padding="5dp"
+        android:textColor="@color/text"
+        android:textColorHint="@color/hint"
+        android:textSize="20dp" />
+  </RelativeLayout>
+
+  <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/login_form"
+      android:id="@+id/pass_form"
+      android:layout_margin="10dp">
+
+    <EditText
+        android:id="@+id/pass_field"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
+        android:background="@color/bg_form"
+        android:drawableLeft="@drawable/ic_password"
+        android:hint="Введіть пароль"
+        android:inputType="textPassword"
+        android:imeOptions="actionNext"
+        android:singleLine="true"
+        android:minHeight="48dp"
+        android:padding="5dp"
+        android:textColor="@color/text"
+        android:textColorHint="@color/hint"
+        android:textSize="20dp" />
+  </RelativeLayout>
+
+  <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/pass_form"
+      android:id="@+id/pass_again_form"
+      android:layout_margin="10dp">
+
+    <EditText
+        android:id="@+id/again_field"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
+        android:background="@color/bg_form"
+        android:drawableLeft="@drawable/ic_password"
+        android:hint="Повторно введіть пароль"
+        android:imeOptions="actionNext"
+        android:inputType="textPassword"
+        android:minHeight="48dp"
+        android:padding="5dp"
+        android:singleLine="true"
+        android:textColor="@color/text"
+        android:textColorHint="@color/hint"
+        android:textSize="20dp" />
+  </RelativeLayout>
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/pass_again_form"
+      android:id="@+id/buttons_form"
+      android:layout_margin="10dp"
+      android:orientation="horizontal">
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_to_back"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:text="Назад"
+        android:layout_margin="10dp">
+    </Button>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_register"
+        android:text="реєстрація"
+        android:layout_margin="10dp">
+    </Button>
+  </LinearLayout>
+
+
+  </RelativeLayout>

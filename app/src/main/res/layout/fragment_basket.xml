@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".BasketFragment"
+    android:background="@color/gray_80">
+
+    <!-- TODO: Update blank fragment layout -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <LinearLayout
+        android:id="@+id/head_form_basket"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/purple_20"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="UTM"
+            android:textSize="30dp"
+            android:textColor="@color/gray_80"
+            android:textStyle="bold"
+            android:layout_margin="5dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="viewEnd"
+            android:text="Корзина"
+            android:textSize="30dp"
+            android:textColor="@color/gray_80"
+            android:textStyle="bold"
+            android:layout_margin="3dp"
+            android:drawableEnd="@drawable/ic_basket"/>
+    </LinearLayout>
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/list_basket"
+            android:layout_margin="10dp"
+            android:layout_above="@+id/btn_form_basket"
+            android:layout_below="@+id/head_form_basket"
+            android:dividerHeight="5dp"></ListView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_form_basket"
+        android:layout_alignParentBottom="true"
+        >
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/to_profile"
+            android:layout_margin="5dp"
+            android:src="@drawable/ic_profile"
+            android:background="@color/gray_80"
+            app:tint="@color/hint"></ImageButton>
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:id="@+id/to_reviews"
+            android:src="@drawable/ic_baseline_message_24"
+            android:background="@color/gray_80"
+            app:tint="@color/hint"></ImageButton>
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/to_shop"
+            android:layout_margin="5dp"
+            android:src="@drawable/ic_shop"
+            android:background="@color/gray_80"
+            app:tint="@color/hint"></ImageButton>
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/to_basket"
+            android:layout_margin="5dp"
+            android:src="@drawable/ic_basket"
+            android:background="@color/purple_20"
+            app:tint="@color/hint"></ImageButton>
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/to_logout"
+            android:layout_margin="5dp"
+            android:src="@drawable/ic_logout"
+            android:background="@color/gray_80"
+            app:tint="@color/hint"></ImageButton>
+
+    </LinearLayout>
+    </RelativeLayout>
+
+</FrameLayout>
